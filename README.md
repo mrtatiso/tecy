@@ -43,7 +43,7 @@ This repository includes `scrap.tecy`, the table built so far by the author's ru
 Running `tecy.py` from this folder keeps adding to that same table. To build your own from zero, run it from an empty folder:
 
     mkdir mytable && cd mytable && python3 ../tecy.py
-    
+
 ## What it does
 
 - **Alternates es.wikipedia and en.wikipedia**, one random article per second, as plain text through the MediaWiki API. The User-Agent says what tecy is and where it comes from, as Wikipedia asks of bots.
