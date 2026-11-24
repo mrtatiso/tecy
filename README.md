@@ -36,6 +36,14 @@ tecy is not a pip package: the English patterns must sit next to `tecy.py`, so r
 
 Nothing else: no header, no signature. Every article adds to it. Stopping is safe at any moment: every article already read is saved, and the next run keeps adding to the same table.
 
+## Published table
+
+This repository includes `scrap.tecy`, the table built so far by the author's runs. It is published on purpose: it is the raw table, not a frozen one, and it is updated when new runs are added, so it changes over time. Its history is the git history of the file.
+
+Running `tecy.py` from this folder keeps adding to that same table. To build your own from zero, run it from an empty folder:
+
+    mkdir mytable && cd mytable && python3 ../tecy.py
+    
 ## What it does
 
 - **Alternates es.wikipedia and en.wikipedia**, one random article per second, as plain text through the MediaWiki API. The User-Agent says what tecy is and where it comes from, as Wikipedia asks of bots.
@@ -77,6 +85,7 @@ The patterns were made for typesetting, so they rarely leave one vowel alone: `a
 | `hyph-en-us.hyp.txt` | 14 English exceptions, unmodified |
 | `hyph-en-us.NOTICE` | copyright, licence and source of the two files above |
 | `test/` | tests |
+| `scrap.tecy` | the table built so far by the author's runs |
 
 tecy checks the sha256 of both pattern files when it starts. If one is missing or different, it stops instead of cutting English wrong without saying so.
 
